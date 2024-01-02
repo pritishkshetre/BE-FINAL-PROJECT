@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	 version="3.1">
+    
+    <servlet>
+        <servlet-name>Cloud</servlet-name>
+        <servlet-class>Multicloud_Storage.Cloud_login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Cloud</servlet-name>
+        <url-pattern>/cloud</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Metaserver_login</servlet-name>
+        <servlet-class>Multicloud_Storage.Server_login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Metaserver_login</servlet-name>
+        <url-pattern>/meta_server</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>User_Reg</servlet-name>
+        <servlet-class>Multicloud_Storage.User_register</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>User_Reg</servlet-name>
+        <url-pattern>/user_reg</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Upload_File</servlet-name>
+        <servlet-class>Multicloud_Storage.data_upload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Upload_File</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Download_file</servlet-name>
+        <servlet-class>Multicloud_Storage.Download</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Download_file</servlet-name>
+        <url-pattern>/download</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
